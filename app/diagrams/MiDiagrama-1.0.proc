@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:decision="http://www.bonitasoft.org/ns/bpm/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/bpm/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/bpm/process">
   <process:MainProcess xmi:id="_dDAuULZXEfCxc6m00NJirw" name="MiDiagrama" bonitaModelVersion="8">
-    <elements xmi:type="process:Pool" xmi:id="_dDAuUbZXEfCxc6m00NJirw" name="Pool">
-      <elements xmi:type="process:Lane" xmi:id="_dDAuUrZXEfCxc6m00NJirw" name="Empleado (lane) " actor="_dDAua7ZXEfCxc6m00NJirw">
+    <elements xmi:type="process:Pool" xmi:id="_dDAuUbZXEfCxc6m00NJirw" name="SolicitudProducción">
+      <elements xmi:type="process:Lane" xmi:id="_dDAuUrZXEfCxc6m00NJirw" name="Empleado Logistica" actor="_OAT5QLZZEfCxc6m00NJirw">
         <elements xmi:type="process:StartEvent" xmi:id="_dDAuU7ZXEfCxc6m00NJirw" name="Inicio1" outgoing="_dDAuaLZXEfCxc6m00NJirw">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_dDAuVLZXEfCxc6m00NJirw" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_dDAuVbZXEfCxc6m00NJirw" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_dDAuVrZXEfCxc6m00NJirw" name="" content="" returnTypeFixed="true"/>
         </elements>
+      </elements>
+      <elements xmi:type="process:Lane" xmi:id="_C6OLELZYEfCxc6m00NJirw" name="Empleado Producción" actor="_Pa7dILZZEfCxc6m00NJirw">
         <elements xmi:type="process:Task" xmi:id="_dDAuV7ZXEfCxc6m00NJirw" name="Tarea1" incoming="_dDAuaLZXEfCxc6m00NJirw" overrideActorsOfTheLane="false">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_dDAuWLZXEfCxc6m00NJirw" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_dDAuWbZXEfCxc6m00NJirw" name="" content="" returnTypeFixed="true"/>
@@ -35,6 +37,8 @@
         <condition xmi:type="expression:Expression" xmi:id="_dDAuarZXEfCxc6m00NJirw" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <actors xmi:type="process:Actor" xmi:id="_dDAua7ZXEfCxc6m00NJirw" documentation="Este es un ejemplo de actor que está mapeado a cualquier usuario de la organización ACME" name="Employee actor" initiator="true"/>
+      <actors xmi:type="process:Actor" xmi:id="_OAT5QLZZEfCxc6m00NJirw" name="Empleado Logistica"/>
+      <actors xmi:type="process:Actor" xmi:id="_Pa7dILZZEfCxc6m00NJirw" name="Empleado Producción"/>
       <contract xmi:type="process:Contract" xmi:id="_dDAubLZXEfCxc6m00NJirw"/>
       <searchIndexes xmi:type="process:SearchIndex" xmi:id="_dDAubbZXEfCxc6m00NJirw">
         <name xmi:type="expression:Expression" xmi:id="_dDAubrZXEfCxc6m00NJirw" content="" returnTypeFixed="true"/>
@@ -74,15 +78,11 @@
         <children xmi:type="notation:Node" xmi:id="_dDAuibZXEfCxc6m00NJirw" type="3007" element="_dDAuUrZXEfCxc6m00NJirw">
           <children xmi:type="notation:DecorationNode" xmi:id="_dDAuirZXEfCxc6m00NJirw" type="5007"/>
           <children xmi:type="notation:DecorationNode" xmi:id="_dDAui7ZXEfCxc6m00NJirw" type="7002">
-            <children xmi:type="notation:Shape" xmi:id="_dDAujLZXEfCxc6m00NJirw" type="3005" element="_dDAuV7ZXEfCxc6m00NJirw" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
-              <children xmi:type="notation:DecorationNode" xmi:id="_dDAujbZXEfCxc6m00NJirw" type="5005"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dDAujrZXEfCxc6m00NJirw" x="182" y="100"/>
-            </children>
             <children xmi:type="notation:Shape" xmi:id="_dDAuj7ZXEfCxc6m00NJirw" type="3002" element="_dDAuU7ZXEfCxc6m00NJirw" fontName="Segoe UI">
               <children xmi:type="notation:DecorationNode" xmi:id="_dDAukLZXEfCxc6m00NJirw" type="5024">
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_dDAukbZXEfCxc6m00NJirw" y="5"/>
               </children>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dDAukrZXEfCxc6m00NJirw" x="62" y="114"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dDAukrZXEfCxc6m00NJirw" x="94" y="113"/>
             </children>
           </children>
           <styles xmi:type="notation:DescriptionStyle" xmi:id="_dDAuk7ZXEfCxc6m00NJirw"/>
@@ -90,6 +90,20 @@
           <styles xmi:type="notation:LineStyle" xmi:id="_dDAulbZXEfCxc6m00NJirw"/>
           <styles xmi:type="notation:FillStyle" xmi:id="_dDAulrZXEfCxc6m00NJirw"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dDAul7ZXEfCxc6m00NJirw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_C6ROYLZYEfCxc6m00NJirw" type="3007" element="_C6OLELZYEfCxc6m00NJirw">
+          <children xmi:type="notation:DecorationNode" xmi:id="_C6R1cLZYEfCxc6m00NJirw" type="5007"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_C6ScgLZYEfCxc6m00NJirw" type="7002">
+            <children xmi:type="notation:Shape" xmi:id="_dDAujLZXEfCxc6m00NJirw" type="3005" element="_dDAuV7ZXEfCxc6m00NJirw" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
+              <children xmi:type="notation:DecorationNode" xmi:id="_dDAujbZXEfCxc6m00NJirw" type="5005"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dDAujrZXEfCxc6m00NJirw" x="62" y="100"/>
+            </children>
+          </children>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_C6ROYbZYEfCxc6m00NJirw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_C6ROYrZYEfCxc6m00NJirw" fontName="Segoe UI"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_C6ROY7ZYEfCxc6m00NJirw"/>
+          <styles xmi:type="notation:FillStyle" xmi:id="_C6ScgbZYEfCxc6m00NJirw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C6ROZLZYEfCxc6m00NJirw" x="194" y="183"/>
         </children>
       </children>
       <styles xmi:type="notation:DescriptionStyle" xmi:id="_dDAumLZXEfCxc6m00NJirw"/>
